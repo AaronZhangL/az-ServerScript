@@ -77,12 +77,18 @@ Is system default: TRUE
 Is user default: TRUE
 Is XIM server: FALSE
 
-## 因為 ibus 移除了，所以理論上應該 imsettings-info 出來就只有 fcitx 可以選，它應該會自已跳成 default ，
+## 因為 ibus 移除了，所以理論上應該 imsettings-info 出來就只有 fcitx 可以選，它應該會自已跳成 default
+
+## 将输入法切换至fcitx
+imsettings-switch fcitx
+## 就可以了，会提示“将输入法切换至fcitx”
+## (im-chooser图形化工具实际上执行的就是imsetting-swith)
+
 ## 如果沒有的話，就乾脆安裝 im-chooser 來選擇 fcitx
 sudo yum -y install im-chooser
 
-### 运行[input Method Selector]， 选择[Use FCITX]之后，点[log Out]
-### 打开[Fcitx Configuration]，在[Input Method Configuration]->[InputMethod]中添加[wubiPinyin]输入法，[Anthy]输入法以及键盘[Keyboard-English(US)]，[Keyboard-Japanese-Japanese(OADG109A)或者其他键盘布局]
+## 运行[input Method Selector]， 选择[Use FCITX]之后，点[log Out]
+## 打开[Fcitx Configuration]，在[Input Method Configuration]->[InputMethod]中添加[wubiPinyin]输入法，[Anthy]输入法以及键盘[Keyboard-English(US)]，[Keyboard-Japanese-Japanese(OADG109A)或者其他键盘布局]
 
 ### 安装搜狗资源包(no free)
 ### 从下面的连接地址下载对应的deb包、32位系统用i386.deb、64位系统用amd64.deb
