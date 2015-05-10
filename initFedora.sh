@@ -26,6 +26,11 @@ sudo yum install flash-plugin
 sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
 sudo yum install flash-plugin
 
+##============================ 
+## 7Zip压缩工具
+##============================
+sudo yum -y install p7zip
+
 ##============================
 ## 为右键菜单添加“在终端中打开”选项
 ##============================
