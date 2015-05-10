@@ -31,6 +31,16 @@ sudo yum install flash-plugin
 ##============================
 sudo yum -y install p7zip
 
+##============================ 
+## RAR解压缩工具
+##============================
+## For free-release:
+su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm'
+## For nonfree-release:
+su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+## To install unrar
+sudo yum install unrar
+
 ##============================
 ## 为右键菜单添加“在终端中打开”选项
 ##============================
