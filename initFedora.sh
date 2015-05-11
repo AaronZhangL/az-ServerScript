@@ -7,7 +7,7 @@
 ## 窗口的右上角就有最大化和最小化按钮
 ## 在日历中显示星期
 ## 设置桌面快捷方式
-sudo yum install gnome-tweak-tool.noarch
+sudo yum -y install gnome-tweak-tool.noarch
 
 ##============================
 ## 安装FTP客户端(Filezilla)：
@@ -58,14 +58,14 @@ $ sudo yum install ibus-table-chinese-wubi-haifeng   #安装海峰五笔， 之�
 ##============================
 ## 卸载系统自带的Ibus输入法
 ##============================
-# sudo yum remove ibus
-# gsettings set org.gnome.settings-daemon.plugins.keyboard active false
+sudo yum -y remove ibus
+gsettings set org.gnome.settings-daemon.plugins.keyboard active false
 
 ##============================
-## 安装Fcitx输入法并安装搜狗资源包
+## 安装Fcitx输入法
 ##============================
 ## 全部安装
-sudo yum install fcitx*
+sudo yum -y install fcitx*
 
 ## 安装Fcitx Qt库，才能在Qt程序里面输入：
 sudo yum -y install fcitx-qt4.i686 
