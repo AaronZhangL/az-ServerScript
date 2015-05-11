@@ -35,9 +35,7 @@ sudo yum -y install p7zip
 ## RAR解压缩工具
 ##============================
 ## For free-release:
-su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm'
-## For nonfree-release:
-su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
 ## To install unrar
 sudo yum install unrar
 
@@ -152,6 +150,19 @@ USE_STYLE="DEFAULT"
 sudo vim /etc/profile.d/infinality-settings.sh  #设置渲染风格，有win7/winXP/linux/osx等
 sudo vim sudo vim /etc/fonts/infinality/styles.conf.avail/win7/20-aliases-default-win.conf #修改win7风格下的字体
 ## 在Infinality配置文件中设置字体的时候，可能需要获得字体的名称，如果中文字体要怎么设置名称呢？首先安装fontconfig软件包，然后在程序中找到“字体查看器”，这时候就可以找到中文字体的英文名称了。
+
+##============================
+## 中文乱码问题
+##============================
+## inux下缺省情况下是采用UTF-8的，windows下则为GB2312，所以我们最好把GBK,GB2312,之类的字符编码加上去。
+sudo yum -y install dconf-editor
+
+## 1，安装dconf-editor ,命令：yum install dconf-editor
+## 2, 运行dconf-editor 。
+## 3，依次点开->org->gnome->gedit->preferences->encodings
+## 在auto-detected的value项中加入'GB18030', 写在第二位；
+## 在shown-in-menu的value项中加入'GB18030', 写在第二位。
+## （对应着方法一中括号中的值）
 
 ##============================
 ## 添加自定义启动脚本
