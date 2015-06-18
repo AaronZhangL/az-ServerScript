@@ -7,6 +7,13 @@ wget -m -e robots=off -U "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9
 #==========
 yum install vim-X11 vim-common vim-enhanced vim-minimal
 
+#===========================================#
+#== CentOS Tools                          ==#
+#===========================================#
+yum install net-tools  # install ifconfig command
+
+
+
 
 
 
