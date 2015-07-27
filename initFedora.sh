@@ -181,6 +181,11 @@ sudo systemctl status rc-local.service
 ## 从Linux系统远程连接后，打开图形界面时，提示：Gtk-Message: Failed to load module “pk-gtk-module”
 ## 解决办法：yum install PackageKit-gtk3-module
 
+##============================
+## Lynx is a text-based browser
+##============================
+sudo yum -y install lynx
+
 
 
 
