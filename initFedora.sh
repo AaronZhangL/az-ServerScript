@@ -185,9 +185,14 @@ sudo systemctl status rc-local.service
 ## Lynx is a text-based browser
 ##============================
 sudo yum -y install lynx
-
-
-
-
-
-
+##============================
+## Nodejs
+##============================
+#Run as root on RHEL, CentOS or Fedora:
+curl --silent --location https://rpm.nodesource.com/setup | bash -
+#Then install, as root:
+yum -y install nodejs 
+#Optional: install build tools
+#To compile and install native addons from npm you may also need to install build tools:
+yum install gcc-c++ make
+# or: yum groupinstall 'Development Tools'
