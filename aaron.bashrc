@@ -20,6 +20,9 @@ sudo ~/01_projects/mountShareFolder.sh
 alias lso="ls -alG | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\" %0o \",k);print}'"
 alias rm='rm -i'
 
+#x11vnc -forever
+#sh /home/aaronzhang/00_tools/az-myFedora/x11vnc-forever.sh
+
 ## 安装Fcitx输入法
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
