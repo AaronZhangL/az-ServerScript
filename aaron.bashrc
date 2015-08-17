@@ -16,6 +16,10 @@ fi
 ## 挂载与宿主机器的共享文件夹
 sudo ~/01_projects/mountShareFolder.sh
 
+## Linux Command Alias 
+alias lso="ls -alG | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\" %0o \",k);print}'"
+alias rm='rm -i'
+
 ## 安装Fcitx输入法
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
