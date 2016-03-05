@@ -181,9 +181,8 @@ docker run -i -t centos6-base cat /etc/redhat-release
 # Notice that the entire application is packaged up and ran from inside of a docker container. This has the interesting consequence that we are not even concerned with what operating system is hosting this registry application. Also, notice that port 5000 in the docker container is mapped to port 5000 on the hosting virtual machine, which makes the application running in the container transparently appear to be running on the virtual machine.
 docker run -p 5000:5000 registry
 
-### Set Up a Registry Server
-# Notice that the entire application is packaged up and ran from inside of a docker container. This has the interesting consequence that we are not even concerned with what operating system is hosting this registry application. Also, notice that port 5000 in the docker container is mapped to port 5000 on the hosting virtual machine, which makes the application running in the container transparently appear to be running on the virtual machine.
-docker run -p 5000:5000 registry
+# Start docker container. SAMPLE-> localhost port:8080, container port: 3000
+docker run -p 8080:3000 -d az:cnvet
 
 # Search Private Registry
 # List all images in the repository
