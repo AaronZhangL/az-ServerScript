@@ -191,6 +191,9 @@ http://registry.example.com:5000/v1/search?
 #Search for all repositories with the word “rhel” in their name
 http://registry.example.com:5000/v1/search?q=rhel
 
+# How to get bash or ssh into a running container in background mode?
+# See: https://docs.docker.com/engine/reference/commandline/exec/
+docker exec -it ubuntu_bash bash
 
 
 
