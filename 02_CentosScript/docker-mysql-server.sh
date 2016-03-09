@@ -66,6 +66,8 @@ IP=$(docker inspect --format='{{.NetworkSettings.IPAddress}}' $CONTAINER_ID)
 echo $IP
 
 #-----------access to mysql server contanier 172.17.0.3, add access user---------
+export TERM=dumb
+mysql -h 172.17.0.3 -u root -p
 CREATE USER 'admin'@'%' IDENTIFIED BY 'xxxx';
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;
 
