@@ -5,6 +5,7 @@ echo "== lscpu =="
 # The lscpu command reports information about the cpu and processing units. It does not have any further options or functionality.
 lscpu
 echo "== lshw =="
+# yum install lshw
 # A general purpose utility, that reports detailed and brief information about multiple different hardware units such as cpu, memory, disk, usb controllers, network adapters etc. Lshw extracts the information from different /proc files.
 lshw
 echo "== hwinfo =="
