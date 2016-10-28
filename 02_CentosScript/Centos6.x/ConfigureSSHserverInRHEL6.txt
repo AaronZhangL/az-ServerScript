@@ -1,0 +1,15 @@
+See: http://www.computernetworkingnotes.com/network-administration/how-to-configure-ssh-server-in-rhel-6.html
+
+Open main configuration file sshd_config
+# vi /etc/ssh/sshd_config
+
+Check the value of PasswordAuthentication directive. In order to accept local user password base authentication it must be set to yes. 
+Set it to yes if it is set to no and save the file.
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication yes  # <--Chang it to [yes]
+PermitEmptyPasswords no
+
+Restart the service if you have made any change in sshd_config
+
+# 
